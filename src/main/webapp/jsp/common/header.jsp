@@ -13,7 +13,7 @@
             <a class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    家常菜谱(自动部署14)
+                    家常菜谱(自动部署15)
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->

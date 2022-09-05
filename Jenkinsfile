@@ -4,6 +4,12 @@ pipeline{
 	}
 
 	stages {
+
+	  stage('pull code'){
+	  	steps{
+	  		checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'order']], userRemoteConfigs: [[credentialsId: '47b4c211-2575-4c09-ba44-61e61a1e2a24', url: 'git@github.com:bolongken/order.git']]])
+	  	}
+	  }
 	  stage('执行脚本') {
 	    steps {
 	      sh '''#jenkins如果在shell里使用nohup发现还是不能后台运行，直接挂掉。

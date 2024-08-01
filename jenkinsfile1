@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build Code')
+        {
+            steps {
+            sh """
+            echo "Order Building Artifact"
+            """
+            }
+        }
+
+        stage('Deploy Code')
+        {
+            steps {
+            sh """
+            echo "Order Deploying Code"
+            """
+            }
+        }
+    }
+}
